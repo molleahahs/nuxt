@@ -12,7 +12,6 @@ let Store = new Redis().client
 
 router.post('/signup', async (ctx) => {
   const {username, password, email, code} = ctx.request.body;
-
   if (code) {
     const saveCode = await Store.hget(`nodemail:${username}`, 'code')
     const saveExpire = await Store.hget(`nodemail:${username}`, 'expire')
