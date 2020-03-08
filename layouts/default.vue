@@ -1,6 +1,6 @@
 <template>
   <el-container class="layout-default">
-    <el-header><my-header/></el-header>
+    <el-header height="200px"><my-header/></el-header>
     <el-main>
       <nuxt />
     </el-main>
